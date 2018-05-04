@@ -1,3 +1,4 @@
+//Audrey Meadows
 import java.util.Scanner;
 import java.io.*;
 import java.util.Random;
@@ -12,6 +13,7 @@ class AThread extends Thread
 
   AThread(int startIndex, int endIndex, int search, int [] arr)
   {
+    System.out.println("Start index: " + startIndex +"   End Index: " + endIndex);
     startIndex = startIndex;
     endIndex = endIndex;
     searchNum = search;
@@ -20,8 +22,10 @@ class AThread extends Thread
 
   public void run()
   {
+    System.out.println("did this work");
+    System.out.println("Start index: " + startIndex +"   End Index: " + endIndex);
     //FILL CODE FOR WHAT THREAD NEEDS TO BE DOING
-    for(int j = 0; j < 100; j++)
+    for(int j = startIndex; j < endIndex; j++)
       {
         if(array[j] == searchNum)
         {
